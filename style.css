@@ -131,6 +131,7 @@
 		.column {
 			width: 413px;
 			float: left;
+			margin: -20px 0 0 0;
 			}
 			
 			#column2 { float: right; }
@@ -148,6 +149,13 @@
 			margin: 0 0 10px 0;
 			}
 			
+		.column em { font-style: italic; }
+		
+		.column a { color: #0080FF; text-decoration: none; }
+		
+			.column a:hover { color: #0053A6; }
+		
+		
 			
 			
 			
@@ -160,7 +168,20 @@
 		width: 100%;
 		padding: 8px 0 0 0;
 		border-top: 1px solid #EFEEEC;
+		margin: 40px 0 20px 0;
+		text-align: right;
+		font: normal 11px/1.8em Verdana, "Lucida Grande", sans-serif;
+		color: #666;
 		}
+		
+		#footer a {
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #507B22;
+			}
+			
+			#footer a:hover { color: #6DB530; }
 		
 	
 	
