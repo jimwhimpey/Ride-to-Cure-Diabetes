@@ -46,6 +46,10 @@
 					paper.text(i * 33, 470, i);
 				};
 				
+				// Draw top line and the title of the graph
+				paper.path({stroke: "#CCC", "stroke-width": "1"}).moveTo(10, 0).lineTo(836, 0);
+				paper.text(10, 15, "Graph of my Fundraising Progress").attr({"fill": "#333", "text-anchor": "start", "font-size": "18px", "font-weight": "bold"});
+				
 				// 10 pixels equal $100. 1 pixel equals $10.
 				// 460 pixels is $0 and we subtract from there.
 				
@@ -63,7 +67,7 @@
 				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 160).lineTo(836, 160);
 				paper.text(10, 145, "$3000").attr({"fill": "#67ABD7", "text-anchor": "start"});
 				paper.path({stroke: "#9ADBEE", "stroke-width": "2"}).moveTo(10, 110).lineTo(836, 110);
-				paper.text(10, 90, "$3500 - My Fund Raising Goal").attr({"fill": "#67ABD7", "text-anchor": "start", "font-size": "13px", "font-weight": "bold"});
+				paper.text(10, 90, "$3500 - My Fundraising Goal").attr({"fill": "#67ABD7", "text-anchor": "start", "font-size": "13px", "font-weight": "bold"});
 				
 				// Draw the progress fundraising line
 				// Week 1
@@ -74,7 +78,7 @@
 				
 				// Draw the ride line and give it a label
 				paper.path({stroke: "#999", "stroke-width": "2"}).moveTo(792, 458).lineTo(792, 0);
-				var rideLabel = paper.text(800, 35, "16/01/10\nRide Day!").attr({"text-anchor": "start", "fill": "#999"});
+				var rideLabel = paper.text(800, 35, "16/01/10\nRide Day!").attr({"text-anchor": "start", "fill": "#777"});
 				// Draw the fundraising deadline and give it a label
 				paper.path({stroke: "#B81D25", "stroke-width": "2"}).moveTo(759, 458).lineTo(759, 0);
 				var rideLabel = paper.text(750, 65, "09/01/10\nFundraising\nDeadline").attr({"text-anchor": "end", "fill": "#B81D25"});
@@ -83,10 +87,6 @@
 			});
 			
 		</script>
-		
-		<style type="text/css" media="screen">
-			#D9FFFF
-		</style>
 		
 	</head>
 
