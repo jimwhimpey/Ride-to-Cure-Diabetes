@@ -30,9 +30,63 @@
 				// Put it into the HTML
 				$(".days-remaining span").html(daysToGo);
 				
+				
+				// Graph Stuff, first crete the campus
+				var paper = Raphael(document.getElementById("graph"), 846, 500);
+
+				// Draw the X axis
+				paper.path({stroke: "#333", "stroke-width": "3"}).moveTo(10, 460).lineTo(836, 460);
+				// Give the X axis a label
+				var xLabel = paper.text(423, 488, "Week Number").attr({"font-family": "Helvetica, Arial", "font-size": 12, "font-weight": "bold"});
+				// Draw a marker along the X axis for each week and give each one a label
+				for (var i = 1; i < 25; i++) {
+					// Marker line
+					paper.path({stroke: "#333", "stroke-width": "2"}).moveTo(i * 33, 460).lineTo(i * 33, 465);
+					// Give each one a label of the week number
+					paper.text(i * 33, 470, i);
+				};
+				
+				// 10 pixels equal $100. 1 pixel equals $10.
+				// 460 pixels is $0 and we subtract from there.
+				
+				// Draw the fundraising milestone lines
+				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 410).lineTo(836, 410);
+				paper.text(10, 395, "$500").attr({"fill": "#67ABD7", "text-anchor": "start"});
+				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 360).lineTo(836, 360);
+				paper.text(10, 345, "$1000").attr({"fill": "#67ABD7", "text-anchor": "start"});
+				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 310).lineTo(836, 310);
+				paper.text(10, 295, "$1500").attr({"fill": "#67ABD7", "text-anchor": "start"});
+				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 260).lineTo(836, 260);
+				paper.text(10, 245, "$2000").attr({"fill": "#67ABD7", "text-anchor": "start"});
+				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 210).lineTo(836, 210);
+				paper.text(10, 195, "$2500").attr({"fill": "#67ABD7", "text-anchor": "start"});
+				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 160).lineTo(836, 160);
+				paper.text(10, 145, "$3000").attr({"fill": "#67ABD7", "text-anchor": "start"});
+				paper.path({stroke: "#9ADBEE", "stroke-width": "2"}).moveTo(10, 110).lineTo(836, 110);
+				paper.text(10, 90, "$3500 - My Fund Raising Goal").attr({"fill": "#67ABD7", "text-anchor": "start", "font-size": "13px", "font-weight": "bold"});
+				
+				// Draw the progress fundraising line
+				// Week 1
+				paper.circle(33, 452, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
+				
+				// Label the progress line
+				paper.text(40, 440, "$100").attr({"fill": "#6DB530", "text-anchor": "start"});
+				
+				// Draw the ride line and give it a label
+				paper.path({stroke: "#999", "stroke-width": "2"}).moveTo(792, 458).lineTo(792, 0);
+				var rideLabel = paper.text(800, 35, "16/01/10\nRide Day!").attr({"text-anchor": "start", "fill": "#999"});
+				// Draw the fundraising deadline and give it a label
+				paper.path({stroke: "#B81D25", "stroke-width": "2"}).moveTo(759, 458).lineTo(759, 0);
+				var rideLabel = paper.text(750, 65, "09/01/10\nFundraising\nDeadline").attr({"text-anchor": "end", "fill": "#B81D25"});
+				
+				
 			});
 			
 		</script>
+		
+		<style type="text/css" media="screen">
+			#D9FFFF
+		</style>
 		
 	</head>
 
