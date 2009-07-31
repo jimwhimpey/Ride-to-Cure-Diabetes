@@ -15,6 +15,7 @@
 		font-family: Georgia, Times, serif;
 		width: 846px;
 		margin: 0 auto;
+		background: url("./images/bg.png") no-repeat top center;
 		}
 		
 		
@@ -35,7 +36,7 @@
 			width: 227px;
 			height: 89px;
 			height: inherit;
-			margin: 20px 0 0 0;
+			margin: 20px 0 0 10px;
 			background: url("images/header-sprite.gif") no-repeat 0 0;
 			text-indent: -9999px;
 			}
@@ -45,7 +46,7 @@
 		#bike {
 			width: 71px;
 			height: 63px;
-			margin: 35px 0 0 24px;
+			margin: 35px 0 0 20px;
 			background: url("images/bike.gif");
 			}
 			
