@@ -153,6 +153,12 @@
 		.column a { color: #0080FF; text-decoration: none; }
 		
 			.column a:hover { color: #0053A6; }
+			
+		.column ul {
+			font: normal 11px/1.8em Verdana, "Lucida Grande", sans-serif;
+			list-style: square;
+			margin: 0 0 14px 20px;
+			}
 		
 		
 			
