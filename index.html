@@ -71,9 +71,12 @@
 				// Draw the progress fundraising line
 				// Week 1
 				paper.circle(33, 452, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
+				// Week 2
+				paper.circle(66, 427, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
+				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(33, 452).lineTo(66, 427);
 				
 				// Label the progress line
-				paper.text(40, 440, "$100").attr({"fill": "#6DB530", "text-anchor": "start"});
+				paper.text(75, 415, "$350").attr({"fill": "#6DB530", "text-anchor": "start"});
 				
 				// Draw the ride line and give it a label
 				paper.path({stroke: "#999", "stroke-width": "2"}).moveTo(792, 458).lineTo(792, 0);
