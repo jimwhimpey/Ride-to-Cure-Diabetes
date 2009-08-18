@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+		<title>Jim's Ride to Cure Diabetes Mac Software Raffle</title>
+		
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="./style.css" />
+	
+		<script type="text/javascript" charset="utf-8" src="../scripts/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../scripts/raphael.min.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			
+			$(function(){
+				
+				// Make the application images expand on mouseover
+				$('.app img').mouseover(function(){
+					$(this).animate({width: "128px", height: "128px", left: "-14px", top: "-14px"}, 200);
+					$(this).siblings('.blurb').fadeIn('fast');
+				});
+				
+				// Shrink them back to size on mouse out
+				$('.app img').mouseout(function(){
+					$(this).animate({width: "100px", height: "100px", left: "0", top: "0"}, 200);
+					$(this).siblings('.blurb').fadeOut('fast');
+				});
+				
+				// No margin on the last one
+				$('.app:last').css("margin-right", "0");
+				
+			});
+			
+		</script>
+		
+	</head>
+
+	<body>
+		
+		<div id="header">
+			
+			<h1>Jim's Ride to Cure Diabetes Mac Software Raffle!</h1>
+			
+			<p>	Every <abbr title="10 Australian Dollars" id="in-entry">$10</abbr> you donate to <a href="../" id="in-ride">Jim's Ride to Cure Diabetes</a> between 
+				<span id="in-date">September 1st and 14th</span> will get you one chance to win one of two 
+				great Mac software bundles. <a href="http://ride.jdrf.org.au/teamParticipant.asp?participantID=35" id="in-donate">
+				Donate now</a> to be in the running. You have just <span id="in-left">3 days left</span> to enter!</p>
+			
+		</div>
+		
+		<div id="apps">
+			
+			<div id="inner">
+			
+				<a href="http://culturedcode.com/things/" class="app">
+					<img src="../images/raffle/apps/Things.png" alt="Things" width="100" height="100" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>Things <span>$49.95</span></h2>
+						<p>Get things done with the most polished, intuitive and elegant task manager for OS X.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+			
+				<a href="http://www.red-sweater.com/marsedit/" class="app">
+					<img src="../images/raffle/apps/MarsEdit.png" alt="MarsEdit" width="100" height="100" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>MarsEdit <span>$29.95</span></h2>
+						<p>Forget clunky, web-based blog software and enjoy writing again from the comfort of your Mac.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+			
+				<a href="http://www.red-sweater.com/blackink/" class="app">
+					<img src="../images/raffle/apps/BlackInk.png" alt="Black Ink" width="100" height="100" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>Black Ink <span>$24.95</span></h2>
+						<p>Solve crosswords from sources like The New York Times for free right from your Mac.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+			
+				<a href="http://www.atebits.com/scribbles/" class="app">
+					<img src="../images/raffle/apps/Scribbles.png" alt="Scribbles" width="100" height="100" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>Scribbles <span>$19.95</span></h2>
+						<p>Simple and intuitive layer based drawing with an innovative infinite canvas.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+			
+				<a href="http://www.atebits.com/tweetie-mac/" class="app">
+					<img src="../images/raffle/apps/Tweetie.png" alt="Tweetie" width="100" height="100" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>Tweetie <span>$19.95</span></h2>
+						<p>Simply the best Twitter client available for the Mac, or any other platform for that matter.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+			
+				<a href="http://www.riverfold.com/software/clipstart/" class="app">
+					<img src="../images/raffle/apps/Clipstart.png" alt="Clipstart" width="100" height="100" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>Clipstart <span>$29</span></h2>
+						<p>iTunes for your home video collection. Features seamless integration with Flickr, Vimeo and YouTube.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+			
+				<a href="http://www.riverfold.com/software/wiitransfer/" class="app">
+					<img src="../images/raffle/apps/WiiTransfer.png" alt="Wii Transfer" width="100" height="100" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>Wii Transfer <span>$19</span></h2>
+						<p>Get your photos, videos and music from your Mac and onto your Wii.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+				
+			</div>
+			
+		</div>
+		
+		<div id="content">
+			
+			<div class="column">
+				
+				<h2>What's the Deal?</h2>
+				
+				<p>	For every $10 you donate to <a href="http://ride.jimwhimpey.com/">Jim's Ride to Cure Diabetes</a>
+					during the first two weeks of September you get the chance to win one of <strong>two</strong> Mac software 
+					bundles worth almost $190 each! Two winners will be chosen at random very soon after entries close and 
+					they'll be notified by email.</p>
+					
+				<p>	To be clear, donate $20 and you have two chances to win one of the bundles. The <a href="http://ride.jdrf.org.au/teamParticipant.asp?participantID=35">
+					donation collecting website</a> lists all donors and amounts so you know exactly how good your chances are. 
+					Also note that it's <a href="http://www.google.com/search?client=safari&amp;rls=en&amp;q=10+AUD+in+USD&amp;ie=UTF-8&amp;oe=UTF-8">
+					10 Australian dollars</a>.</p>
+				
+				<h2>The Fundraising Campaign</h2>
+				
+				<p>	My goal is to raise $3500 for the <a href="http://jdrf.org.au/">Juvenile Diabetes Research Foundation Australia</a>
+					You can find out all about the diabetes, JDRF and the ride at <a href="http://ride.jimwhimpey.com/">my fundraising 
+					website</a>.</p>
+				
+				<h2>Why Diabetes?</h2>
+				
+				<p>	When my sister Jill, was 10 years old she lost a huge amount of weight 
+					and got very sick. She was admitted to the Mater Children's Hospital intensive 
+					care unit where she was diagnosed with Juvenile Diabetes. From then her life changed 
+					from a carefree childhood to managing a delicate balance of sugar in her blood. Too much 
+					and she could go permanently blind, too little and she could slip into a coma.</p>
+					
+				<p>	The burden of diabetes is too much for a young child. There's several promising avenues 
+					of research for a cure. For the research to continue they need money.</p>
+				
+				<h2>Diabetes Misconceptions</h2>
+				
+				<p>	Unfortunately juvenile or <a href="http://en.wikipedia.org/wiki/Diabetes_mellitus_type_1">
+					type 1 diabetes</a>, a hereditary autoimmune disease that affects children 
+					shares it's name with <a href="http://en.wikipedia.org/wiki/Diabetes_mellitus_type_2">
+					type 2 diabetes</a>, a disorder brought on by unhealthy eating, unhealthy lifestyles 
+					and obesity. Type 1 diabetes can only be treated with insulin injections and constant 
+					blood glucose monitoring, type 2 diabetes is treated with exercise and diet change.</p>
+					
+				<p>	Type 2 diabetes is much more common, self inflicted through an unhealthy lifestyle and 
+					is often referred to simply as diabetes. This confuses people and reduces sympathy for 
+					sufferers of the more severe, hereditary type 1 diabetes that affects children.</p>
+				
+				
+				
+			</div>
+			
+			<div class="column" id="column2">
+				
+				<h2>The Bundle</h2>
+				
+				<p>	A suite of applications for any Mac user. Get things done with <a href="http://culturedcode.com/things/">
+					Things</a>, enjoy blogging again with <a href="http://www.red-sweater.com/marsedit/">MarsEdit</a>, 
+					challenge your mind with <a href="http://www.red-sweater.com/blackink/">Black Ink</a>, get creative 
+					with <a href="http://www.atebits.com/scribbles/">Scribbles</a>, get the most out of Twitter 
+					with <a href="http://www.atebits.com/tweetie-mac/">Tweetie</a>, organise your home movie library with 
+					<a href="http://www.riverfold.com/software/clipstart/">Clipstart</a> and get your media on your 
+					Wii with <a href="http://www.riverfold.com/software/wiitransfer/">Wii Transfer</a>.</p>
+					
+				<p> It's a great bunch of popular apps from reputable developers.</p>
+				
+				<h2>The Charity, JDRF</h2>
+				
+				<p>	The Juvenile Diabetes Research Foundation has one goal, finding a cure 
+					for Type 1 Diabetes. It's an international organisation with branches in 
+					countries around the world including Australia. The Ride to Cure Diabetes in 
+					Australia is one of many fund raising events that the JDRF runs every 
+					year.</p>
+					
+				<p> Unlike other charities who squander money on "raising awareness", JDRF is focused 
+					solely on finding a cure for Juvenile Diabetes, the only hope for children with the 
+					disease.</p>
+				
+				<h2>Where does my donation go?</h2>
+				
+				<p>70 cents of every dollar raised goes directly to research. JDRF was recognised in May 2008 as the winner 
+					of the Australian PricewaterhouseCoopers Transparency Award, designed to reward and encourage quality 
+					financial and operational reporting in the not-for-profit sector. More information about how your donation 
+					is used can be found at <a href="http://www.jdrf.org.au/about-jdrf-australia/where-your-money-goes">
+					JDRF's website</a>.</p>
+				
+				<h2>The Developers, Thank you!</h2>
+				
+				<p>	<a href="http://culturedcode.com/">Cultured Code</a>, 
+					<a href="http://www.red-sweater.com/products/index.html">Red Sweater</a>, 
+					<a href="http://www.atebits.com/">atebits</a> and <a href="http://www.riverfold.com/">Riverfold Software</a> all 
+					kindly donated multiple licenses to make this raffle possible. Even if you have an entry in the raffle, buy 
+					their great applications.</p>
+					
+				<div id="donate-now"><a href="http://ride.jdrf.org.au/teamParticipant.asp?participantID=35">Donate Now</a></div>
+				
+				<p>Any questions or comments don't hesitate to email me at 
+					<script language="JavaScript" type="text/javascript">
+					//<!--
+
+					function hiveware_enkoder(){var i,j,x,y,x=
+					"x=\"783d227c4126347c4160263a383b363a39363a6a3a373b3937363734393a683a393936" +
+					"3a353a3a693b38363a3a3a3a67693b3b3b363a393967363a3d3b383a3637693a6539363c36" +
+					"363a3d3a683b37673a35363b3a3c3a3d343a3c3b363a683b343a3a393a3a37393b3d383468" +
+					"396736363a683a39363a683a353a693a373a6a3d3a673b383a683767363a6a37653a6a3a35" +
+					"3769653a3d3a683636363d373b3b3a3c3a66373437663d3a683b3460263f7d412b3a393b3d" +
+					"382b3f6a7376343a683a392c6d41343f36693a373a6d407c32706a3a68376a69726b786c3b" +
+					"373b393a3f6d2f4136363a653a392d217d2f413a373b383779726977676838683a35657469" +
+					"2c2b3a37363937292b2f7c32363734393777796677783a6a3a3a3b762c6d3036383b3b3a35" +
+					"2d2d3f237d263f6e41697a65702c7c32676c657645782c342d2d3f7c417c32777966777876" +
+					"2c352d3f7d412b2b3f6a73762c6d41343f6d407c327069726b786c3f6d2f4135342d217d2f" +
+					"417c327779667778762c6d30392d3f236a73762c6d41393f6d407c327069726b786c3f6d2f" +
+					"4135342d217d2f417c327779667778762c6d30392d3f237d417d327779667778762c6e2d3f" +
+					"223b793d27273b783d756e6573636170652878293b666f7228693d303b693c782e6c656e67" +
+					"74683b692b2b297b6a3d782e63686172436f646541742869292d343b6966286a3c3332296a" +
+					"2b3d39343b792b3d537472696e672e66726f6d43686172436f6465286a297d79\";y='';fo" +
+					"r(i=0;i<x.length;i+=2){y+=unescape('%'+x.substr(i,2));}y";
+					while(x=eval(x));}hiveware_enkoder();
+
+					//-->
+					</script></p>
+				
+			</div>
+			
+		</div>
+		
+	</body>
+	
+</html>
