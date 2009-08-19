@@ -30,6 +30,21 @@
 				// No margin on the last one
 				$('.app:last').css("margin-right", "0");
 				
+				// Work out how many days left
+				// Today's date
+				var nowDate = new Date();
+				// Date of the deadline
+				var rideDate = new Date("September 14, 2009");
+				// Convert them both to seconds
+				var nowTime = nowDate.getTime()/1000;
+				var rideTime = rideDate.getTime()/1000;
+				// Do the maths
+				var difference = rideTime - nowTime;
+				// Work out how many days that is and round it
+				var daysToGo = Math.floor(difference/60/60/24);
+				// Put it into the HTML
+				$("#in-left").html(daysToGo + " days left");
+				
 			});
 			
 		</script>
@@ -248,6 +263,14 @@
 					</script></p>
 				
 			</div>
+			
+			<div style="clear: both;"></div>
+			
+		</div>
+		
+		<div id="footer">
+			
+			<a href="http://ride.jimwhimpey.com"></a>
 			
 		</div>
 		
