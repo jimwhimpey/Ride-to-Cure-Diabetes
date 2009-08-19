@@ -45,6 +45,18 @@
 				// Put it into the HTML
 				$("#in-left").html(daysToGo + " days left");
 				
+				// Make the overlay the same size of the window
+				$("#over").css({"width": window.innerWidth, "height": window.innerHeight});
+				
+				// If the raffle is over then we'll display an overlay with some information
+				if (daysToGo == 0) {
+					$("#over").css("display", "block");
+					$("#header").css("display", "none");
+					$("#content").css("display", "none");
+					$("#apps").css("display", "none");
+					$("#footer").css("display", "none");
+				}
+				
 			});
 			
 		</script>
@@ -271,6 +283,20 @@
 		<div id="footer">
 			
 			<a href="http://ride.jimwhimpey.com"></a>
+			
+		</div>
+		
+		<div id="over">
+			
+			<h2>Sorry, Raffle's Over!</h2>
+			
+			<p>But it's not to late to <a href="http://ride.jimwhimpey.com">donate</a>.</p>
+			
+			<p>	Many thanks to the following generous Mac developers who made this raffle possible: 
+				<a href="http://culturedcode.com/">Cultured Code</a>, 
+				<a href="http://www.red-sweater.com/products/index.html">Red Sweater</a>, 
+				<a href="http://www.atebits.com/">atebits</a> and <a href="http://www.riverfold.com/">Riverfold Software</a>. 
+				They're all amazing!</p>
 			
 		</div>
 		
