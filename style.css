@@ -119,6 +119,31 @@
 			
 			
 /* 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		RAFFLE
+	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+	
+	#raffle {
+		width: 886px;
+		height: 73px;
+		margin: 15px 0 25px -20px;
+		padding: 10px 0;
+		background: #BEE95E;
+		display: none;
+		}
+		
+		#raffle a {
+			display: block;
+			width: 866px;
+			height: 73px;
+			background: url("./images/raffle-promo-sprite.gif") 26px 0 no-repeat;
+			}
+			
+			#raffle a:hover { background: url("./images/raffle-promo-sprite.gif") 26px -73px no-repeat; }
+	
+			
+			
+			
+/* 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		CONTENT
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 			
