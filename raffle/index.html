@@ -17,13 +17,13 @@
 				
 				// Make the application images expand on mouseover
 				$('.app img').mouseover(function(){
-					$(this).animate({width: "128px", height: "128px", left: "-14px", top: "-14px"}, 200);
+					$(this).animate({width: "128px", height: "128px", left: "-29px", top: "-29px"}, 200);
 					$(this).siblings('.blurb').fadeIn('fast');
 				});
 				
 				// Shrink them back to size on mouse out
 				$('.app img').mouseout(function(){
-					$(this).animate({width: "100px", height: "100px", left: "0", top: "0"}, 200);
+					$(this).animate({width: "70px", height: "70px", left: "0", top: "0"}, 200);
 					$(this).siblings('.blurb').fadeOut('fast');
 				});
 				
@@ -34,7 +34,7 @@
 				// Today's date
 				var nowDate = new Date();
 				// Date of the deadline
-				var rideDate = new Date("September 14, 2009");
+				var rideDate = new Date("September 15, 2009");
 				// Convert them both to seconds
 				var nowTime = nowDate.getTime()/1000;
 				var rideTime = rideDate.getTime()/1000;
@@ -76,12 +76,12 @@
 			
 		</div>
 		
-		<div id="apps">
+		<div class="apps">
 			
-			<div id="inner">
+			<div class="inner">
 			
 				<a href="http://culturedcode.com/things/" class="app">
-					<img src="../images/raffle/apps/Things.png" alt="Things" width="100" height="100" />
+					<img src="../images/raffle/apps/Things.png" alt="Things" width="70" height="70" />
 					<div class="blurb">
 						<div class="heading"></div>
 						<h2>Things <span>$49.95</span></h2>
@@ -91,7 +91,7 @@
 				</a>
 			
 				<a href="http://www.red-sweater.com/marsedit/" class="app">
-					<img src="../images/raffle/apps/MarsEdit.png" alt="MarsEdit" width="100" height="100" />
+					<img src="../images/raffle/apps/MarsEdit.png" alt="MarsEdit" width="70" height="70" />
 					<div class="blurb">
 						<div class="heading"></div>
 						<h2>MarsEdit <span>$29.95</span></h2>
@@ -101,7 +101,7 @@
 				</a>
 			
 				<a href="http://www.red-sweater.com/blackink/" class="app">
-					<img src="../images/raffle/apps/BlackInk.png" alt="Black Ink" width="100" height="100" />
+					<img src="../images/raffle/apps/BlackInk.png" alt="Black Ink" width="70" height="70" />
 					<div class="blurb">
 						<div class="heading"></div>
 						<h2>Black Ink <span>$24.95</span></h2>
@@ -111,7 +111,7 @@
 				</a>
 			
 				<a href="http://www.atebits.com/scribbles/" class="app">
-					<img src="../images/raffle/apps/Scribbles.png" alt="Scribbles" width="100" height="100" />
+					<img src="../images/raffle/apps/Scribbles.png" alt="Scribbles" width="70" height="70" />
 					<div class="blurb">
 						<div class="heading"></div>
 						<h2>Scribbles <span>$19.95</span></h2>
@@ -121,7 +121,7 @@
 				</a>
 			
 				<a href="http://www.atebits.com/tweetie-mac/" class="app">
-					<img src="../images/raffle/apps/Tweetie.png" alt="Tweetie" width="100" height="100" />
+					<img src="../images/raffle/apps/Tweetie.png" alt="Tweetie" width="70" height="70" />
 					<div class="blurb">
 						<div class="heading"></div>
 						<h2>Tweetie <span>$19.95</span></h2>
@@ -131,7 +131,7 @@
 				</a>
 			
 				<a href="http://www.riverfold.com/software/clipstart/" class="app">
-					<img src="../images/raffle/apps/Clipstart.png" alt="Clipstart" width="100" height="100" />
+					<img src="../images/raffle/apps/Clipstart.png" alt="Clipstart" width="70" height="70" />
 					<div class="blurb">
 						<div class="heading"></div>
 						<h2>Clipstart <span>$29</span></h2>
@@ -141,7 +141,7 @@
 				</a>
 			
 				<a href="http://www.riverfold.com/software/wiitransfer/" class="app">
-					<img src="../images/raffle/apps/WiiTransfer.png" alt="Wii Transfer" width="100" height="100" />
+					<img src="../images/raffle/apps/WiiTransfer.png" alt="Wii Transfer" width="70" height="70" />
 					<div class="blurb">
 						<div class="heading"></div>
 						<h2>Wii Transfer <span>$19</span></h2>
@@ -150,8 +150,38 @@
 					</div>
 				</a>
 				
+				<a href="http://www.macmation.com/TimeBoxed/" class="app">
+					<img src="../images/raffle/apps/TimeBoxed.png" alt="TimeBoxed" width="70" height="70" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>TimeBoxed <span>&euro;9.90</span></h2>
+						<p>A simple OS X timer application. The perfect compliment to Things.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+				
+				<a href="http://agilewebsolutions.com/products/1Password" class="app">
+					<img src="../images/raffle/apps/1Password.png" alt="1Password" width="70" height="70" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>1Password <span>$39.95</span></h2>
+						<p>Simultaneously get more secure passwords and release the burden to remember them.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+				
+				<a href="http://saltatory.com/" class="app">
+					<img src="../images/raffle/apps/Family.png" alt="Family" width="70" height="70" />
+					<div class="blurb">
+						<div class="heading"></div>
+						<h2>Family <span>$29.95</span></h2>
+						<p>Effortlessly create and store Family Trees the Mac way.</p>
+						<div class="footing"></div>
+					</div>
+				</a>
+				
 			</div>
-			
+		
 		</div>
 		
 		<div id="content">
@@ -162,7 +192,7 @@
 				
 				<p>	For every $10 you donate to <a href="http://ride.jimwhimpey.com/">Jim's Ride to Cure Diabetes</a>
 					during the first two weeks of September you get the chance to win one of <strong>two</strong> Mac software 
-					bundles worth almost $190 each! Two winners will be chosen at random very soon after entries close and 
+					bundles worth almost $275 each! Two winners will be chosen at random very soon after entries close and 
 					they'll be notified by email.</p>
 					
 				<p>	To be clear, donate $20 and you have two chances to win one of the bundles. The <a href="http://ride.jdrf.org.au/teamParticipant.asp?participantID=35">
@@ -199,12 +229,27 @@
 				<p>	Type 2 diabetes is much more common, self inflicted through an unhealthy lifestyle and 
 					is often referred to simply as diabetes. This confuses people and reduces sympathy for 
 					sufferers of the more severe, hereditary type 1 diabetes that affects children.</p>
+					
+				<h2>The Developers, Thank you!</h2>
 				
+				<p>	<a href="http://culturedcode.com/">Cultured Code</a>, 
+					<a href="http://www.red-sweater.com/products/index.html">Red Sweater</a>, 
+					<a href="http://www.atebits.com/">atebits</a>, <a href="http://www.riverfold.com/">Riverfold Software</a> and
+					<a href="http://www.macmation.com/">MacMotion</a> all 
+					kindly donated multiple licenses to make this raffle possible. Even if you have an entry in the raffle, buy 
+					their great applications.</p>
 				
 				
 			</div>
 			
 			<div class="column" id="column2">
+				
+				<h2>iTunes Bonus!</h2>
+				
+				<p>John Eddie of <a href="http://www.zicronsoftware.com/">Zicron Software</a>, makers of the iPhone app 
+					<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=323347728&amp;mt=8">
+					Years</a>, is kindly donating a $10 iTunes gift voucher to each raffle winner. Use it to buy a copy of 
+					Years and other iPhone software to compliment your swag of new Mac apps.</p>
 				
 				<h2>The Bundle</h2>
 				
@@ -213,8 +258,11 @@
 					challenge your mind with <a href="http://www.red-sweater.com/blackink/">Black Ink</a>, get creative 
 					with <a href="http://www.atebits.com/scribbles/">Scribbles</a>, get the most out of Twitter 
 					with <a href="http://www.atebits.com/tweetie-mac/">Tweetie</a>, organise your home movie library with 
-					<a href="http://www.riverfold.com/software/clipstart/">Clipstart</a> and get your media on your 
-					Wii with <a href="http://www.riverfold.com/software/wiitransfer/">Wii Transfer</a>.</p>
+					<a href="http://www.riverfold.com/software/clipstart/">Clipstart</a>, get your media on your 
+					Wii with <a href="http://www.riverfold.com/software/wiitransfer/">Wii Transfer</a>, stay on 
+					time with <a href="http://www.macmation.com/TimeBoxed">TimeBoxed</a>, remember your passwords with 
+					<a href="http://agilewebsolutions.com/products/1Password">1Password</a> and trace your history with 
+					<a href="http://saltatory.com/">Family</a>.</p>
 					
 				<p> It's a great bunch of popular apps from reputable developers.</p>
 				
@@ -237,14 +285,6 @@
 					financial and operational reporting in the not-for-profit sector. More information about how your donation 
 					is used can be found at <a href="http://www.jdrf.org.au/about-jdrf-australia/where-your-money-goes">
 					JDRF's website</a>.</p>
-				
-				<h2>The Developers, Thank you!</h2>
-				
-				<p>	<a href="http://culturedcode.com/">Cultured Code</a>, 
-					<a href="http://www.red-sweater.com/products/index.html">Red Sweater</a>, 
-					<a href="http://www.atebits.com/">atebits</a> and <a href="http://www.riverfold.com/">Riverfold Software</a> all 
-					kindly donated multiple licenses to make this raffle possible. Even if you have an entry in the raffle, buy 
-					their great applications.</p>
 					
 				<div id="donate-now"><a href="http://ride.jdrf.org.au/teamParticipant.asp?participantID=35">Donate Now</a></div>
 				
