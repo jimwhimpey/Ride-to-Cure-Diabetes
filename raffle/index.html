@@ -49,7 +49,7 @@
 				$("#over").css({"width": window.innerWidth, "height": window.innerHeight});
 				
 				// If the raffle is over then we'll display an overlay with some information
-				if (daysToGo == 0) {
+				if (daysToGo <= 0) {
 					$("#over").css({"display": "block", "z-index": 100});
 					$("#header").css("display", "none");
 					$("#content").css("display", "none");
