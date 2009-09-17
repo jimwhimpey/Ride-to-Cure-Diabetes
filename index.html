@@ -49,9 +49,6 @@
 				// Draw top line and the title of the graph
 				paper.text(10, 15, "Graph of my Fundraising Progress").attr({"fill": "#333", "text-anchor": "start", "font-size": "18px", "font-weight": "bold"});
 				
-				// 10 pixels equal $100. 1 pixel equals $10.
-				// 460 pixels is $0 and we subtract from there.
-				
 				// Draw the fundraising milestone lines
 				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 410).lineTo(836, 410);
 				paper.text(10, 395, "$500").attr({"fill": "#67ABD7", "text-anchor": "start"});
@@ -89,9 +86,15 @@
 				// Week 7
 				paper.circle(231, 332, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
 				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(198, 351).lineTo(231, 332);
+				// Week 8
+				paper.circle(264, 322, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
+				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(231, 332).lineTo(264, 322);
+				
+				// 10 pixels equal $100. 1 pixel equals $10.
+				// 460 pixels is $0 and we subtract from there.
 				
 				// Label the progress line
-				paper.text(247, 320, "$1297").attr({"fill": "#6DB530", "text-anchor": "start"});
+				paper.text(278, 315, "$1402").attr({"fill": "#6DB530", "text-anchor": "start"});
 				
 				// Draw the ride line and give it a label
 				paper.path({stroke: "#999", "stroke-width": "2"}).moveTo(792, 458).lineTo(792, 0);
