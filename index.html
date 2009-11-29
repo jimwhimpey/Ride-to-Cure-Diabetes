@@ -20,115 +20,147 @@
 				var nowDate = new Date();
 				// Date of the ride
 				var rideDate = new Date("January 15, 2010");
-				// Convert them both to seconds
-				var nowTime = nowDate.getTime()/1000;
-				var rideTime = rideDate.getTime()/1000;
 				// Do the maths
-				var difference = rideTime - nowTime;
-				// Work out how many days that is and round it
+				var difference = (rideDate.getTime()/1000) - (nowDate.getTime()/1000);
+				// Work out how many days that is and round it and put it into the HTML
 				var daysToGo = Math.floor(difference/60/60/24);
 				// Put it into the HTML
 				$(".days-remaining span").html(daysToGo);
 				
 				
-				// Graph Stuff, first crete the campus
+				// =======================================
+				
+				
+				// Graph Stuff, first crete the canvas
 				var paper = Raphael(document.getElementById("graph"), 846, 500);
 
-				// Draw the X axis
-				paper.path({stroke: "#333", "stroke-width": "3"}).moveTo(10, 460).lineTo(836, 460);
-				// Give the X axis a label
+				// Draw the X axis and label it
+				paper.path("M 10 460 L 836 460").attr({stroke: "#333", "stroke-width": "3"});
 				var xLabel = paper.text(423, 488, "Week Number").attr({"font-family": "Helvetica, Arial", "font-size": 12, "font-weight": "bold"});
+				
 				// Draw a marker along the X axis for each week and give each one a label
 				for (var i = 1; i < 25; i++) {
-					// Marker line
-					paper.path({stroke: "#333", "stroke-width": "2"}).moveTo(i * 33, 460).lineTo(i * 33, 465);
-					// Give each one a label of the week number
-					paper.text(i * 33, 470, i);
+					paper.path("M " + i * 33 + " 460 L " + i * 33 + " 465").attr({stroke: "#333", "stroke-width": "3"});
+					paper.text(i * 33, 475, i);
 				};
 				
 				// Draw top line and the title of the graph
 				paper.text(10, 15, "Graph of my Fundraising Progress").attr({"fill": "#333", "text-anchor": "start", "font-size": "18px", "font-weight": "bold"});
 				
 				// Draw the fundraising milestone lines
-				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 410).lineTo(836, 410);
-				paper.text(10, 395, "$500").attr({"fill": "#67ABD7", "text-anchor": "start"});
-				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 360).lineTo(836, 360);
-				paper.text(10, 345, "$1000").attr({"fill": "#67ABD7", "text-anchor": "start"});
-				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 310).lineTo(836, 310);
-				paper.text(10, 295, "$1500").attr({"fill": "#67ABD7", "text-anchor": "start"});
-				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 260).lineTo(836, 260);
-				paper.text(10, 245, "$2000").attr({"fill": "#67ABD7", "text-anchor": "start"});
-				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 210).lineTo(836, 210);
-				paper.text(10, 195, "$2500").attr({"fill": "#67ABD7", "text-anchor": "start"});
-				paper.path({stroke: "#9ADBEE", "stroke-width": "1"}).moveTo(10, 160).lineTo(836, 160);
-				paper.text(10, 145, "$3000").attr({"fill": "#67ABD7", "text-anchor": "start"});
-				paper.path({stroke: "#9ADBEE", "stroke-width": "2"}).moveTo(10, 110).lineTo(836, 110);
+				var startline = 110;
+				// The major milestone line
+				paper.path("M 10 110 L 836 " + startline).attr({stroke: "#9ADBEE", "stroke-width": "1"});
 				paper.text(10, 90, "$3500 - My Fundraising Goal").attr({"fill": "#67ABD7", "text-anchor": "start", "font-size": "13px", "font-weight": "bold"});
+				// The rest of the lines
+				for (var i = 3000; i >= 500; i = i-500) {
+					paper.path("M 10 " + (startline + (i/10)) + " L 836 " + (startline + (i/10))).attr({stroke: "#9ADBEE", "stroke-width": "1"});
+					paper.text(10, (startline + (i/10)) - 10, "$" + (3500 - i)).attr({"fill": "#67ABD7", "text-anchor": "start"});
+				};
 				
-				// Draw the progress fundraising line
-				// Week 1
-				paper.circle(33, 452, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				// Week 2
-				paper.circle(66, 427, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(33, 452).lineTo(66, 427);
-				// Week 3
-				paper.circle(99, 421, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(66, 427).lineTo(99, 421);
-				// Week 4
-				paper.circle(132, 421, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(99, 421).lineTo(132, 421);
-				// Week 5
-				paper.circle(165, 421, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(132, 421).lineTo(165, 421);
-				// Week 6
-				paper.circle(198, 351, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(165, 421).lineTo(198, 351);
-				// Week 7
-				paper.circle(231, 332, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(198, 351).lineTo(231, 332);
-				// Week 8
-				paper.circle(264, 322, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(231, 332).lineTo(264, 322);
-				// Week 9
-				paper.circle(297, 300, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(264, 322).lineTo(297, 300);
-				// Week 10
-				paper.circle(330, 300, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(297, 300).lineTo(330, 300);
-				// Week 11
-				paper.circle(366, 298, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(330, 300).lineTo(366, 298);
-				// Week 12
-				paper.circle(399, 298, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(366, 298).lineTo(399, 298);
-				// Week 13
-				paper.circle(432, 215, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(399, 298).lineTo(432, 215);
-				// Week 14
-				paper.circle(465, 215, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(432, 215).lineTo(465, 215);
-				// Week 15
-				paper.circle(498, 215, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(465, 215).lineTo(498, 215);
-				// Week 16
-				paper.circle(531, 214, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(498, 214).lineTo(531, 214);
-				// Week 17
-				paper.circle(564, 144, 4).attr({"fill": "#6DB530", "stroke": "#6DB530"});
-				paper.path({"stroke": "#6DB530", "stroke-width": "2"}).moveTo(531, 214).lineTo(564, 144);
+				// Array of fundraising data
+				var data = new Array();
+				data[1] = 100;
+				data[2] = 350;
+				data[3] = 410;
+				data[4] = 410;
+				data[5] = 410;
+				data[6] = 1110;
+				data[7] = 1300;
+				data[8] = 1400;
+				data[9] = 1620;
+				data[10] = 1620;
+				data[11] = 1640;
+				data[12] = 1640;
+				data[13] = 2470;
+				data[14] = 2470;
+				data[15] = 2470;
+				data[16] = 2480;
+				data[17] = 3197;
 				
-				// 10 pixels equal $100. 1 pixel equals $10.
-				// 460 pixels is $0 and we subtract from there.
+				// Initialise the line and start positions
+				var line = "";
+				var xPosition = 33;
+				var yPosition = 452;
 				
-				// Label the progress line
-				paper.text(574, 132, "$3197").attr({"fill": "#6DB530", "text-anchor": "start"});
+				// First move into position
+				line += "M " + xPosition + " " + yPosition;
+				
+				// Initialise arrays of stuff
+				var circles = new Array();
+				var labels = new Array();
+				var labelbgs = new Array();
+				
+				// Draw the first circle and put it in the array
+				var circle = paper.circle(xPosition, yPosition, 5).attr({"fill": "#6DB530", "stroke-width": "1", "stroke": "#ffffff"}).toFront();
+				circles.push(circle);
+				
+				// Loop through the data creating the SVG string for drawing the graph
+				// Draw the circles and blanket fill the underneath area.
+				for (var i=1; i < data.length; i++) {
+					
+					// Convert the money raised into pixels
+					var week = Math.round(data[i]/10);
+					// X and Y positions
+					xPosition += 33;
+					yPosition = 460 - week;
+					
+					// Create the line
+					line += " L " + xPosition + " " + yPosition + "\n";
+					
+					// Draw the circle and add it to the array
+					var circle = paper.circle(xPosition, yPosition, 5).attr({"fill": "#6DB530", "stroke-width": "1", "stroke": "#ffffff"}).toFront();
+					circles.push(circle);
+					
+					// Create the label background and add it to the array
+					var labelbg = paper.rect(xPosition - 23, yPosition - 30, 46, 18, 5).attr({"fill": "#6DB530", "stroke-width": "0"}).toFront();
+					labelbg.attr({"opacity": "0"});
+					labelbgs.push(labelbg);
+					
+					// Create the label and add it to the array
+					var label = paper.text(xPosition, yPosition - 20, "$" + data[i]).attr({"fill": "#ffffff", "font-weight": "bold", "font-size": "12px"}).toFront();
+					label.attr({"opacity": "0"});
+					labels.push(label);
+					
+				};
+				
+				// Draw the line
+				paper.path(line).attr({"stroke": "#6DB530", "stroke-width": "2"});
+				
+				// Create the blanket fill
+				var blanket = line + "L" + xPosition + " 460 L 33 460 L 33 452";
+				paper.path(blanket).attr({"stroke-width": "0", "fill": "#6DB530", "fill-opacity": 0.3});
+				
+				// Create and attach events for the highlighting of each dot and
+				// fading in of each dot's label and value.
+				$(circles).each(function (i) {
+					circles[i].node.style.cursor = "pointer";
+					circles[i].toFront();
+					if (i < labelbgs.length) {
+						labelbgs[i].toFront();
+						labels[i].toFront();	
+					}
+					$(circles[i].node).mouseover(function(){
+						circles[i].toFront();
+						circles[i].animate({"r": "8"}, 200);
+						labelbgs[i-1].animate({"opacity": "1"}, 200);
+						labels[i-1].animate({"opacity": "1"}, 200);
+						return false;
+					});
+					$(circles[i].node).mouseout(function(){
+						circles[i].animate({"r": "5"}, 200);
+						labelbgs[i-1].animate({"opacity": 0}, 200);
+						labels[i-1].animate({"opacity": 0}, 200);
+						return false;
+					});
+				});
 				
 				// Draw the ride line and give it a label
-				paper.path({stroke: "#999", "stroke-width": "2"}).moveTo(792, 458).lineTo(792, 0);
-				var rideLabel = paper.text(800, 35, "16/01/10\nRide Day!").attr({"text-anchor": "start", "fill": "#777"});
+				paper.path("M 792 458 L 792 0").attr({stroke: "#999", "stroke-width": "2"});
+				paper.text(800, 35, "16/01/10\nRide Day!").attr({"text-anchor": "start", "fill": "#777"});
 				// Draw the fundraising deadline and give it a label
-				paper.path({stroke: "#B81D25", "stroke-width": "2"}).moveTo(759, 458).lineTo(759, 0);
-				var rideLabel = paper.text(750, 65, "09/01/10\nFundraising\nDeadline").attr({"text-anchor": "end", "fill": "#B81D25"});
+				paper.path("M 759 458 L 759 0").attr({stroke: "#B81D25", "stroke-width": "2"});
+				paper.text(750, 65, "09/01/10\nFundraising\nDeadline").attr({"text-anchor": "end", "fill": "#B81D25"});
 				
 				
 			});
