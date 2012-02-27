@@ -1,0 +1,1 @@
+In 2010 I raised $3500 for the [Juvenile Diabetes Research Foundation](http://www.jdrf.org/) (my sister is sufferer). This is the website I used to help raise funds, see it here: [ride.jimwhimpey.com/](http://ride.jimwhimpey.com/).
